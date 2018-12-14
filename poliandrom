@@ -1,0 +1,36 @@
+public class Poliandrom
+{
+  // arguments are passed using the text field below this editor
+  public static void main(String[] args)
+  {
+    int x = 15751;
+    String str = String.valueOf(x);
+     
+    String one = Character.toString(str.charAt(0));
+    String two = Character.toString(str.charAt(1));
+    String four = Character.toString(str.charAt(3));
+    String five = Character.toString(str.charAt(4));
+    
+    
+    boolean retVal;
+    
+     String oneTwo = one + two;
+    String fiveFour = five + four;
+    
+    //retVal = oneTwo.equals(fiveFour);
+    
+    if (oneTwo.equals(fiveFour)==true){
+    
+      
+      System.out.println( "poli ");
+    }
+    else {
+    System.out.println( "non poli ");
+    }
+    
+    
+   // System.out.println( "One + Two  "+ oneTwo + " Five + Four  " + fiveFour + " anwer  " + retVal);
+    
+    
+  }
+}
