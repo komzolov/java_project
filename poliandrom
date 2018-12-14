@@ -1,36 +1,31 @@
-public class Poliandrom
-{
-  // arguments are passed using the text field below this editor
-  public static void main(String[] args)
-  {
-    int x = 15751;
-    String str = String.valueOf(x);
-     
-    String one = Character.toString(str.charAt(0));
-    String two = Character.toString(str.charAt(1));
-    String four = Character.toString(str.charAt(3));
-    String five = Character.toString(str.charAt(4));
-    
-    
-    boolean retVal;
-    
-     String oneTwo = one + two;
-    String fiveFour = five + four;
-    
-    //retVal = oneTwo.equals(fiveFour);
-    
-    if (oneTwo.equals(fiveFour)==true){
-    
-      
-      System.out.println( "poli ");
-    }
-    else {
-    System.out.println( "non poli ");
-    }
-    
-    
-   // System.out.println( "One + Two  "+ oneTwo + " Five + Four  " + fiveFour + " anwer  " + retVal);
-    
-    
-  }
-}
+import java.util.Scanner;
+
+public class PalindromeFinderTask {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        boolean loop = true;
+        while (loop) {
+            System.out.println("Inter polindrome ....");
+            int x = sc.nextInt();
+            String str = String.valueOf(x);
+            if (str.length() != 5 || str.length() > 5) {
+                System.out.println("Error: input number is not 5 digits long");
+            } else {
+                loop = false;
+                String one = Character.toString(str.charAt(0));
+                String two = Character.toString(str.charAt(1));
+                String four = Character.toString(str.charAt(3));
+                String five = Character.toString(str.charAt(4));
+                String oneTwo = one + two;
+                String fiveFour = five + four;
+
+                if (oneTwo.equals(fiveFour) == true) {
+                    System.out.println(x + " is polindrome!!");
+                } else {
+                    System.out.println(x + " is not polindrome ");
+                }
+
+
+            }
+        }
